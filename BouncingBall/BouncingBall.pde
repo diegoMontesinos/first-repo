@@ -15,6 +15,15 @@ void draw () {
   x += speedX;
   y += speedY;
   
+  // Checamos que rebote
+  if (x >= width || x < 0) {
+    speedX *= -1;
+  }
+  
+  if (y >= height || y < 0) {
+    speedY *= -1;
+  }
+  
   // Pintar la pelota
   fill(0);
   ellipse(x, y, 20, 20);
