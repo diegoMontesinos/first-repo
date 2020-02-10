@@ -6,10 +6,10 @@ float speedY = 2.5;
 
 void setup () {
   size(600, 600);
+  background(8, 50, 191);
 }
 
 void draw () {
-  background(255);
   
   // Moviendo la pelota
   x += speedX;
@@ -20,11 +20,12 @@ void draw () {
     speedX *= -1;
   }
   
-  if (y >= height || y < 0) {
+  if (y >= height || y < 0  ) {
     speedY *= -1;
   }
   
   // Pintar la pelota
-  fill(0);
-  ellipse(x, y, 20, 20);
+  fill(252, 190, 18);
+  noStroke();
+  ellipse(x, y, random(15, 30), random(15, 30));
 }
